@@ -2,7 +2,6 @@ const form = document.getElementById("quoteForm");
 const resultDiv = document.getElementById("result");
 
 // Fetch and populate fiat currencies in the dropdown
-
 const popularFiats = [
   "USD",
   "EUR",
@@ -41,9 +40,6 @@ async function loadFiatCurrencies() {
     currencies = prioritizePopularFiats(currencies, popularFiats);
 
     const fromCurrencySelect = document.getElementById("fromCurrency");
-
-    // Clear any existing options
-    fromCurrencySelect.innerHTML = "";
 
     currencies.forEach((curr) => {
       const opt = document.createElement("option");
@@ -161,7 +157,11 @@ form.addEventListener("submit", async (e) => {
 
       <p><strong>Source Amount Without Fees:</strong> ${Number(quote.sourceAmountWithoutFees).toFixed(2)} ${quote.sourceCurrencyCode}</p>
 
-      <p><strong>Destination Amount:</strong> ${Number(quote.destinationAmount).toFixed(6)} ${quote.destinationCurrencyCode}</p>
+      <p ><strong>Destination Amount:</strong> 
+        <p class="destination-amount">
+          ${Number(quote.destinationAmount).toFixed(6)} ${quote.destinationCurrencyCode}
+        </p>
+      </p>
 
       <p><strong>Network Fee:</strong> ${quote.networkFee || "N/A"}</p>
 

@@ -1,6 +1,6 @@
 # Meld Sandbox Integration Demo
 
-This project demonstrates a quote retrieval flow using the Meld White-Label sandbox API.
+This project demonstrates a basic integration with the Meld White-Label sandbox API to retrieve fiat-to-crypto purchase quotes from multiple providers.
 
 Flow:
 
@@ -10,7 +10,17 @@ Flow:
 4. The API returns available provider quotes.
 5. Quotes are sorted and displayed in the frontend, highlighting the best quote.
 
-This represents the initial stage of an on-ramp transaction flow.
+User Browser
+↓
+Frontend (HTML / JS)
+↓
+Node.js Backend (Express)
+↓
+Meld Sandbox API
+↓
+Quote Response
+↓
+Frontend displays provider quotes
 
 Features
 
@@ -19,7 +29,6 @@ Features
 - Dynamic dropdowns for fiat and crypto currencies
 - Popular currencies (USD, EUR, etc.) appear first
 - Popular cryptos (BTC, ETH, USDC, etc.) appear first
-- Searchable crypto selector with optional icons
 - Simple frontend UI to display results
 
 Architecture:
@@ -59,7 +68,8 @@ API Authencation:
 
 Quote Display
 
-- Quotes are sorted by destinationAmount to highlight the best provider for the user.
+- Quotes are sorted by destinationAmount to highlight the best provider for the user. Meaning the provider offering the highest amount
+  of cryptocurrency for the same fiat amount appears first.
 - The best quote is visually distinguished using CSS (.best-quote).
 
 Notes / Challenges

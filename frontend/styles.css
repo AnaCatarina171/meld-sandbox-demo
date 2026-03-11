@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
   background: #0b1431;
   margin: 0;
   display: flex;
@@ -40,6 +40,21 @@ select {
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #1d2d44;
+  box-shadow: 0 0 0 2px rgba(29, 45, 68, 0.15);
+}
+
+select:hover {
+  border-color: #2a4160;
+}
+
+option {
+  padding: 10px;
+  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
 }
 
 button {
@@ -102,10 +117,17 @@ button:hover {
   transform: scale(1.02);
 }
 
-.total-fee {
-  padding: 6px;
-  background-color: #cdd6f4;
+.destination-amount {
+  font-weight: bold;
+  color: #1d2d44;
+  background: #e6edf8;
+  padding: 3px 15px;
   border-radius: 6px;
+  margin-top: 8px;
+}
+
+.total-fee {
+  color: #bf015a;
 }
 
 /* responsive web design */
