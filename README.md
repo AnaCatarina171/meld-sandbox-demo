@@ -87,3 +87,9 @@ This project requires a MELD sandbox API key.
 MELD_API_KEY=your_sandbox_key_here
 
 3. Make sure `.env` is listed in `.gitignore` to keep your key private.
+
+## Demo Video
+
+You can see the project in action:
+
+[Watch Demo](./demo/demo.mp4)
